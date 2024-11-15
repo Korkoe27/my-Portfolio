@@ -1,7 +1,7 @@
+// const hamburger = document.getElementById('hamburger');
 
-document.querySelector('#hamburger').addEventListener("click", function(event) {
-    // console.log('Hello');
-    document.getElementById('menu').style.display = 'flex';
-    // document.getElementById('menu').style.position = 'absolute';
-});
+function toggleHamburger(){
+const dropdown = document.getElementById('menu');
 
+    
+}

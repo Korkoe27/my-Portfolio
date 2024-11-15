@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./src/style.css">
     <title>Korkoe Dumashie</title>
 </head>
+
+
 <body class="">
-    <section class="w-full h-lvh backdrop-blur-xl py-4 bg-center bg-cover bg-[url('/assets/imgs/main-bg.jpg')]">
+    <section class="w-full h-lvh backdrop-blur-xl bg-center bg-cover bg-[url('/assets/imgs/main-bg.jpg')]">
 
         <header class="flex  sm:flex-col w-full px-1">
-            <button type="button"  class="mr-0 flex flex-col items-end mx-auto px-4 gap-2 lg:hidden" id="hamburger">
-                <span class="h-[2px] w-10 text-black dark:bg-white bg-white rounded-full m-0 mr-0"></span>
-                <span class="h-[2px] w-10 text-black dark:bg-white bg-white rounded-full m-0 mr-0"></span>
-                <span class="h-[2px] w-10 text-black dark:bg-white bg-white rounded-full m-0 mr-0"></span>
-                <span class="h-[2px] w-10 text-black dark:bg-white bg-white rounded-full m-0 mr-0"></span>
-            </button>
-            <nav id="menu" class="md:hidden lg:fixed lg:left-1/2  bg-red-400 md:absolute hidden sm:p-4 text-right sm:items-end lg:flex sm:flex-col lg:flex-row sm:gap-1 md:gap-2 sm:right-0 sm:top-10 sm:absolute sm:mr-0 md:mr-0 lg:gap-20 lg:mx-auto capitalize ">
-                <a href="#" class="text-white text-lg">home</a>
-                <a href="#" class="text-white text-lg">about</a>
-                <a href="#" class="text-white text-lg">portfolio</a>
-                <a href="#" class="text-white text-lg">contact</a>
+
+
+          <button class="w-fit h-fit lg:hidden flex flex-col gap-2 p-8 absolute right-0 top-0" id="hamburger" onclick="toggleHamburger()">
+            <span class="w-12 h-1 text-white bg-white rounded-full"></span>
+            <span class="w-12 h-1 text-white bg-white rounded-full"></span>
+            <span class="w-12 h-1 text-white bg-white rounded-full"></span>
+            <span class="w-12 h-1 text-white bg-white rounded-full"></span>
+          </button>
+          
+          
+          
+          
+            <nav id="menu"  class="md:hidden lg:absolute lg:left-[35%] hidden sm:p-8 text-right sm:items-end lg:flex sm:flex-col md:flex-col lg:flex-row sm:gap-1 md:gap-2 sm:right-0 sm:top-16 sm:absolute sm:mr-0 md:mr-0 lg:gap-20 lg:mx-auto capitalize">
+                <a href="#" class="text-white text-lg lg:text-3xl hover:underline">home</a>
+                <a href="#" class="text-white text-lg lg:text-3xl hover:underline">about</a>
+                <a href="#" class="text-white text-lg lg:text-3xl hover:underline">portfolio</a>
+                <a href="#" class="text-white text-lg lg:text-3xl hover:underline">contact</a>
             </nav>
         </header>
 
@@ -37,9 +46,6 @@
 
 
 <script src="./src/script.js">
-
-// const hamburger = document.getElementById('hamburger');
-// console.log(hamburger)
 </script>
 </body>
 </html>
