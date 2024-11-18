@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}","index.html"],
+  content: [    "./src/**/*.{html,js}", // Matches all HTML and JS files in the `src` directory and subdirectories
+    "./index.html",          // Includes `index.html` in the root directory
+    "./src/script.js" ],
   theme: {
     extend: {
       cursor: {
