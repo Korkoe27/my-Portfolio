@@ -1,5 +1,13 @@
 function toggleHamburger() {
-    const dropdown = document.getElementById('menu');
-    dropdown.classList.toggle('hidden'); // Tailwind's `hidden` utility class
-    console.log('Menu toggled');
+  const dropdown = document.getElementById('menu');
+  const hamburger = document.getElementById('hamburger');
+
+  // Toggle menu visibility
+  if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+    dropdown.style.display = 'flex';
+  } else {
+    dropdown.style.display = 'none';
   }
+
+  hamburger.classList.toggle('hamburger-active');
+}

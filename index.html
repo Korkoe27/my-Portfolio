@@ -10,26 +10,50 @@
 
 
 <body class="">
+
+
+  <style>
+    /* Default state */
+#line1,
+#line2,
+#line3 {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Active state for the "X" effect */
+.hamburger-active #line1 {
+  transform: rotate(45deg) translateY(1rem);
+}
+
+.hamburger-active #line2 {
+  opacity: 0; /* Hide the middle line */
+}
+
+.hamburger-active #line3 {
+  transform: rotate(-45deg) translateY(-1rem);
+}
+
+  </style>
     <section class="w-full h-lvh backdrop-blur-xl bg-center bg-cover bg-[url('/assets/imgs/main-bg.jpg')]">
 
-        <header class="flex  sm:flex-col w-full px-1">
+        <header class="flex  sm:flex-col w-full lg:mx-auto px-1">
 
 
-          <button class="w-fit h-fit lg:hidden flex flex-col gap-2 p-8 absolute right-0 top-0" id="hamburger" onclick="toggleHamburger()">
-            <span class="w-12 h-1 text-white bg-white rounded-full"></span>
-            <span class="w-12 h-1 text-white bg-white rounded-full"></span>
-            <span class="w-12 h-1 text-white bg-white rounded-full"></span>
-            <span class="w-12 h-1 text-white bg-white rounded-full"></span>
+          <button class="w-fit h-fit lg:hidden flex flex-col lg:flex-row gap-2 p-8 absolute right-0 top-0" id="hamburger" onclick="toggleHamburger()">
+            <span class="w-12 h-1 text-white bg-white rounded-full transition-transform duration-300 origin-center" id="line1"></span>
+            <span class="w-12 h-1 text-white bg-white rounded-full transition-opacity duration-300" id="line2"></span>
+            <span class="w-12 h-1 text-white bg-white rounded-full transition-transform duration-300 origin-center" id="line3"></span>
           </button>
           
           
           
           
-            <nav id="menu"  class="md:hidden lg:absolute lg:left-[35%] hidden sm:p-8 text-right sm:items-end lg:flex sm:flex-col md:flex-col lg:flex-row sm:gap-1 md:gap-2 sm:right-0 sm:top-16 sm:absolute sm:mr-0 md:mr-0 lg:gap-20 lg:mx-auto capitalize">
-                <a href="#" class="text-white text-lg lg:text-3xl hover:underline">home</a>
-                <a href="#" class="text-white text-lg lg:text-3xl hover:underline">about</a>
-                <a href="#" class="text-white text-lg lg:text-3xl hover:underline">portfolio</a>
-                <a href="#" class="text-white text-lg lg:text-3xl hover:underline">contact</a>
+          
+            <nav id="menu"  class="md:hidden hidden lg:absolute lg:left-1 lg:w-fit p-8 text-right  lg:flex flex-col md:flex-col  lg:flex-row absolute gap-1 md:gap-2 right-0 top-16 mr-0 md:mr-0 lg:gap-20 lg:mx-auto capitalize">
+                <a href="#" class="text-white text-3xl hover:underline">home</a>
+                <a href="#" class="text-white text-3xl hover:underline">about</a>
+                <a href="#" class="text-white text-3xl hover:underline">portfolio</a>
+                <a href="#" class="text-white text-3xl hover:underline">contact</a>
             </nav>
         </header>
 
